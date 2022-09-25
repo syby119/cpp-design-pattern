@@ -7,9 +7,11 @@ int main() {
     SubscriberB subscriberB;
     SubscriberC subscriberC;
 
-    publisher.notify(&subscriberA);
-    publisher.notify(&subscriberB);
-    publisher.notify(&subscriberC);
+    publisher.attach(&subscriberA);
+    publisher.attach(&subscriberB);
+    publisher.attach(&subscriberC);
+    
+    publisher.notify();
 
     return 0;
 }

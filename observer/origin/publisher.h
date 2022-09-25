@@ -3,9 +3,22 @@
 
 class Publisher {
 public:
-    void notify(SubscriberA* subscriber);
+    void notify();
 
-    void notify(SubscriberB* subscriber);
+    void attach(SubscriberA* subscriber);
+    
+    void attach(SubscriberB* subscriber);
+    
+    void attach(SubscriberC* subscriber);
 
-    void notify(SubscriberC* subscriber);
+    void detach(SubscriberA* subscriber);
+
+    void detach(SubscriberB* subscriber);
+    
+    void detach(SubscriberC* subscriber);
+
+private:
+    SubscriberA* _subscriberA = nullptr;
+    SubscriberB* _subscriberB = nullptr;
+    SubscriberC* _subscriberC = nullptr;
 };
