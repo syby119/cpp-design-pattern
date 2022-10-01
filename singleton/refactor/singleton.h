@@ -16,11 +16,9 @@ public:
     static Singleton* getInstance();
 
 private:
-#ifdef THREAD_SAFE
-    static std::atomic<Singleton*> _instance;
-    static std::mutex _mutex;
-#else
     static Singleton* _instance;
+#ifdef THREAD_SAFE
+    static std::once_flag _instanceCreated;
 #endif
 
     Singleton();
