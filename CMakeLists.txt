@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_CXX_STANDARD 14)
 
-# add_subdirectory(./abstract_factory)
+add_subdirectory(./abstract_factory)
 # add_subdirectory(./adaptor)
 # add_subdirectory(./bridge)
 # add_subdirectory(./builder)
