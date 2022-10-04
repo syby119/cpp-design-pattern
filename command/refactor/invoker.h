@@ -12,3 +12,11 @@ public:
 protected:
     Command* _command = nullptr;
 };
+
+class Invoker1: public Invoker {
+
+};
+
+class Invoker2: public Invoker {
+
+};
