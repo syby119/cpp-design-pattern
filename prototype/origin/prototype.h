@@ -14,7 +14,7 @@ public:
     
     PrototypeA(const PrototypeA& rhs);
 
-    virtual void print() override;
+    void print() override;
 
 private:
     std::string _state;
