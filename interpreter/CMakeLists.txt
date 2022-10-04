@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.10)
 
 project(interpreter)
 
-file(GLOB ORIGIN_SRC ./origin/*.h ./origin/*.cpp)
-file(GLOB REFACTOR_SRC ./refactor/*.h ./refactor/*.cpp)
+file(GLOB SRC *.h *.cpp)
 
-add_executable(interpreter_origin ${ORIGIN_SRC})
-add_executable(interpreter_refactor ${REFACTOR_SRC})
+add_executable(interpreter ${SRC})
